@@ -1,0 +1,176 @@
+:root {
+    --bg-color: #E0E1DD;
+    --section-color: #1B263B;
+    --sub-section-color: #415A77;
+    --text-color: #0D1B2A;
+    --text-shadow-color: #778DA9;
+    --bg-linear-gradient-1:#555353;
+    --bg-linear-gradient-2:#363535;
+    --box-shadow: inset 0 6px 1px 0 rgba(0,0,0,0.35),
+    0 5px 5px rgba(0,0,0,0.5),
+    0 15px 25px rgba(0,0,0,0.35);
+}
+
+*{
+    /* outline: 2px solid greenyellow; */
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: var(--bg-color);
+}
+
+body {
+    padding: 2em;
+}
+
+h1, h2, h3 {
+    color: white;
+    text-shadow: var(--text-color) 2px 2px;
+    text-align: center;
+    margin: 1em;
+    padding: 1em;
+    text-decoration: none;
+    background-color:var(--text-shadow-color);
+    border-radius: 4px;
+    box-shadow:  0 6px 1px 0 rgba(0,0,0,0.35),
+    0 2px 2px rgba(0,0,0,0.5),
+    0 1px 10px rgba(0,0,0,0.35);
+}
+
+.button {
+    background-color:rgb(99, 5, 206);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    border-radius: 8px;
+    box-shadow:  inset 0 6px 1px 0 rgba(0,0,0,0.35),
+    0 5px 5px rgba(0,0,0,0.5),
+    0 15px 25px rgba(0,0,0,0.35);
+}
+
+.button:hover {
+    background-color:rgb(81, 2, 172);
+}
+
+.button:active {
+    background-color: rgb(81, 2, 172);
+    box-shadow: 0 5px #000000;
+    transform: translateX(4px);
+}
+
+#directory {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 1em 0;
+    margin-bottom: 2em;
+}
+
+#my-picture {
+    display: block;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 2em;
+    box-shadow: inset 0 6px 1px 0 rgba(0,0,0,0.35),
+    0 5px 5px rgba(0,0,0,0.5),
+    0 15px 25px rgba(0,0,0,0.35);
+}
+
+#about-me p, #about-me a, #skills li, #projects p {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+#about-me a {
+    text-decoration: none;
+}
+
+#about-me a:hover{
+    color: var( --text-shadow-color);
+}
+
+#calculator {
+    display: grid;
+    grid-template-areas: "calc-one calc-two" "calc-button calc-button";
+    justify-content: center;
+    align-items: center;
+}
+
+#calculator .picture {
+    margin: 1em;
+    border-radius: 16px;
+    box-shadow: inset 0 6px 1px 0 rgba(0,0,0,0.35),
+    0 5px 5px rgba(0,0,0,0.5),
+    0 5px 5px rgba(0,0,0,0.35);
+}
+
+#calculator #calc-one {
+    grid-area: calc-one;
+}
+
+#calculator #calc-two {
+    grid-area: calc-two;
+}
+
+#calculator .calc-button {
+    grid-area: calc-button;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 1em;
+}
+
+
+#design {
+    margin: 1em;
+    padding: 2em;
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+}
+
+.design-pic {
+margin: 1em;
+border-radius: 8px;
+box-shadow: inset 0 6px 1px 0 rgba(0,0,0,0.35),
+    0 5px 5px rgba(0,0,0,0.5),
+    0 5px 5px rgba(0,0,0,0.35);
+}
+
+#bottom-button {
+    margin: 1em;
+    padding: 1em;
+    display: grid;
+    justify-content: center;
+}
+
+
+footer {
+    margin: 3em;
+    text-size-adjust: .5em;
+}
+
+@media (max-width: 400px) {
+    h1 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #my-picture{
+        display: none;
+    }
+    #directory {
+        display: flex;
+        flex-direction: column;
+    }
+    #calculator .picture {
+        display: none;
+    }
+    .design-pic {
+        display: none;
+    }
+}
